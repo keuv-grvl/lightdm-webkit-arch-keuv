@@ -21,7 +21,7 @@ This is a theme for LightDM Webkit.
 ### Future
 
 - Geolocation for complete weather forecast
-- User selection with a carousel ([slick](http://kenwheeler.github.io/slick/)?)
+- User selection with a carousel ([slick](http://kenwheeler.github.io/slick/)? [bevel](https://github.com/Blender3D/Bevel)?)
 - Analog clock?
 - Some useful informations (unread emails, running jobs, system monitor, etc.)
 
