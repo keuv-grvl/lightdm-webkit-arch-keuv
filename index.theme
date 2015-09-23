@@ -1,0 +1,6 @@
+[theme]
+name=lightdm-webkit-arch-keuv
+description=Personal greeter theme for Arch Linux
+engine=lightdm-webkit2-greeter
+url=index.html
+session=gnome

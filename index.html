@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/font-awesome-4.4.0/css/font-awesome.min.css">
+   
+</head>
+<body>
+
+    <div class="info-wrapper">
+			<div id="clock">--:--:--</div>
+			<div id="date" class="info-block">--/--/----</div>
+			<hr />
+			<div id="weather" class="info-block" ></div>
+			
+			<!--
+			<div id="email" class="info-block">
+				<h2><i class="fa fa-envelope-o"></i> 6</h2>
+			</div>
+			
+			<div id="jobs" class="info-block">
+				<h2><i class="fa fa-terminal"></i> 2</h2>
+			</div>
+			-->
+			
+		</div> <!-- .info-wrapper -->
+		
+
+
+    <div class="login-wrapper">
+        <img
+            class="profile-img"
+            src="assets/ui/default_avatar.png"
+        />
+        <form>
+            <select id="user" class="rounded" tabindex="1"/>
+            <input id="pass" class="rounded" placeholder="Password" type="password" tabindex="2"/>
+            <button id="submit-btn" type="submit" tabindex="3" class="btn btn-primary"/>Log in</button>
+        </form>
+    </div>
+        	
+
+		<div class="actions-bar">
+			<ul id="controls">
+				<li id="shutdown">
+					<i class="fa fa-power-off"></i>
+				</li>
+				<li id="reboot">
+					<i class="fa fa-refresh"></i>
+				</li>
+				<li id="sleep">
+					<i class="fa fa-moon-o"></i>
+				</li>
+			</ul>
+		</div>
+
+
+
+    <!-- deps -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="assets/js/jquery.simpleWeather.min.js"></script>
+    
+    <!-- scripts -->    
+    <script src="assets/js/mock.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script >
+			
+/** WEATHER **/
+if (navigator.geolocation) {
+	$('#weather').show();			
+} else {
+	$('#weather').hide();
+}
+
+$(document).ready(function() {
+	$.simpleWeather({
+		location: 'Clermont-Ferrand',
+		woeid: '',
+		unit: 'c',
+		success: function(weather) {
+			html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+
+			$("#weather").html(html);
+		},
+		error: function(error) {
+			$("#weather").html('<p>'+error+'</p>');
+		}
+	});
+});
+		</script>
+    
+</body>
+</html>
