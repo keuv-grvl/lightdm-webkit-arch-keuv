@@ -5,7 +5,7 @@ Personnal theme for LightDM highly inspired by [nejsan's Wisp theme](http://nejs
 
 This is a theme for LightDM Webkit.
 
-### [Demo](http://keuv-gravouil.github.io/lightdm-webkit-arch-keuv/)
+### [Demo](http://keuv-grvl.github.io/lightdm-webkit-arch-keuv/)
 
 ### Features
 
